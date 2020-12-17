@@ -2,11 +2,11 @@ FROM alpine:3.10
 
 # Refs:
 # https://github.com/nginxinc/docker-nginx/blob/a973c221f6cedede4dab3ab36d18240c4d3e3d74/mainline/alpine/Dockerfile
-# https://hg.nginx.org/pkg-oss/file/1.17.6-1/alpine/Makefile#l214
+# https://hg.nginx.org/pkg-oss/file/1.19.6-1/alpine/Makefile#l214
 
 LABEL maintainer="NGINX Docker Maintainers <docker-maint@nginx.com>"
 
-ENV NGINX_VERSION 1.17.6
+ENV NGINX_VERSION 1.19.6
 ENV NJS_VERSION   0.3.7
 ENV PKG_RELEASE   1
 
@@ -35,8 +35,8 @@ RUN set -x \
         && mkdir -p /usr/src \
         && cd /usr/src \
         && mkdir nginx-upsync \
-        && git clone --single-branch --branch v1.2.1 https://github.com/xiaokai-wang/nginx-stream-upsync-module.git nginx-upsync/nginx-stream-upsync-module \
-        && git clone --single-branch --branch v2.1.1 https://github.com/weibocom/nginx-upsync-module.git nginx-upsync/nginx-upsync-module \
+        && git clone --single-branch --branch v1.2.2 https://github.com/xiaokai-wang/nginx-stream-upsync-module.git nginx-upsync/nginx-stream-upsync-module \
+        && git clone --single-branch --branch v2.1.3 https://github.com/weibocom/nginx-upsync-module.git nginx-upsync/nginx-upsync-module \
         && curl https://raw.githubusercontent.com/CallMeFoxie/nginx-upsync/d147d4e42ad53033a4cc45c65e3c5940ea8770a0/config --output nginx-upsync/config \
        && hg clone https://hg.nginx.org/pkg-oss /usr/src/pkg-oss \
        && tempDir="$(mktemp -d)" \
