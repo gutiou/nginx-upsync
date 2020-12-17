@@ -8,12 +8,12 @@ Docker Image for [Nginx Upsync](https://hub.docker.com/r/vitovan/nginx-upsync)
 
 Current Version: 
 
-- Nginx: [1.17.6](https://github.com/nginxinc/docker-nginx/blob/1.17.6/mainline/alpine/Dockerfile)
-- nginx-upsync-module: [v2.1.1](https://github.com/weibocom/nginx-upsync-module/tree/v2.1.1)
-- nginx-stream-upsync-module: [v1.2.1](https://github.com/xiaokai-wang/nginx-stream-upsync-module/tree/v1.2.1)
+- Nginx: [1.19.6](https://github.com/nginxinc/docker-nginx/blob/1.17.6/mainline/alpine/Dockerfile)
+- nginx-upsync-module: [v2.1.3](https://github.com/weibocom/nginx-upsync-module/tree/v2.1.3)
+- nginx-stream-upsync-module: [v1.2.2](https://github.com/xiaokai-wang/nginx-stream-upsync-module/tree/v1.2.2)
 
 
-This image enabled two more [modules](https://www.nginx.com/resources/wiki/modules/) beyond [Nginx Offical Mainline Alpine Image](https://github.com/nginxinc/docker-nginx/blob/1.17.6/mainline/alpine/Dockerfile):
+This image enabled two more [modules](https://www.nginx.com/resources/wiki/modules/) beyond [Nginx Offical Mainline Alpine Image](https://github.com/nginxinc/docker-nginx/blob/1.19.6/mainline/alpine/Dockerfile):
 
 - [nginx-upsync-module](https://github.com/weibocom/nginx-upsync-module)
 
@@ -62,10 +62,3 @@ This image enabled two more [modules](https://www.nginx.com/resources/wiki/modul
 
 3. Run
 
-    ```bash
-    docker run -d --name nginx-upsync \
-       -v `pwd`/nginx-upsync.conf:/etc/nginx/nginx.conf \
-       -v `pwd`/nginx-demo.conf:/etc/nginx/conf.d/demo.conf \
-       -p 9000:80 \
-       vitovan/nginx-upsync:1.17.6
-    ```
